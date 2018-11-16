@@ -6,7 +6,6 @@ const fs = require('fs')
 
 const port = process.env.PORT || 3000; 
 
-
 var app = express()
 
 
@@ -59,6 +58,14 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle:"About"
+    })
+})
+
+
+app.get('/project', (req, res) => {
+    res.render('project.hbs' , {
+        pageTitle:"Portfolio",
+        message:" This is a Portfolio Page"
     })
 })
 
